@@ -1,21 +1,23 @@
 import React from "react";
 import { IconType } from "react-icons";
 import {
-  FiDollarSign,
-  FiHome,
-  FiLink,
-  FiPaperclip,
-  FiUsers,
-} from "react-icons/fi";
+  FcBullish,
+  FcShipped,
+  FcConferenceCall,
+  FcBusiness,
+  FcDepartment,
+  FcDataSheet
+} from "react-icons/fc";
 
 export const RouteSelect = () => {
   return (
     <div className="space-y-1">
-      <Route Icon={FiHome} selected={true} title="Dashboard" />
-      <Route Icon={FiUsers} selected={false} title="Team" />
-      <Route Icon={FiPaperclip} selected={false} title="Invoices" />
-      <Route Icon={FiLink} selected={false} title="Integrations" />
-      <Route Icon={FiDollarSign} selected={false} title="Finance" />
+      <Route Icon={FcDepartment} selected={true} title="Enterprise Performance" />
+      <Route Icon={FcDataSheet} selected={false} title="AIP" />
+      <Route Icon={FcBusiness} selected={false} title="Sector Performance" />
+      <Route Icon={FcConferenceCall} selected={false} title="People" />
+      <Route Icon={FcBullish} selected={false} title="Finance" />
+      <Route Icon={FcShipped} selected={false} title="Supplier" />
     </div>
   );
 };

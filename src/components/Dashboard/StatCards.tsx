@@ -10,6 +10,7 @@ export const StatCards = () => {
         pillText="2.75%"
         trend="up"
         period="From Jan 1st - Jul 31st"
+        domain="Finance"
       />
       <Card
         title="Avg Order"
@@ -17,13 +18,15 @@ export const StatCards = () => {
         pillText="1.01%"
         trend="down"
         period="From Jan 1st - Jul 31st"
+        domain="Supplier"
       />
       <Card
-        title="Trailing Year"
+        title="Labor Cost"
         value="$278,054.24"
         pillText="60.75%"
         trend="up"
         period="Previous 365 days"
+        domain="People"
       />
     </>
   );
@@ -35,12 +38,14 @@ const Card = ({
   pillText,
   trend,
   period,
+  domain
 }: {
   title: string;
   value: string;
   pillText: string;
   trend: "up" | "down";
   period: string;
+  domain:string;
 }) => {
   return (
     <div className="col-span-4 p-4 rounded border border-stone-300">
@@ -48,6 +53,7 @@ const Card = ({
         <div>
           <h3 className="text-stone-500 mb-2 text-sm">{title}</h3>
           <p className="text-3xl font-semibold">{value}</p>
+          <p className="text-stone-400 text-lg">{domain}</p>
         </div>
 
         <span
